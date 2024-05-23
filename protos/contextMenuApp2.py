@@ -9,7 +9,7 @@ class MainWindow(qt_wdg.QMainWindow):
         super().__init__()
         self.show()
 
-        self.setContextMenuPolicy(qt_gui.CustomContextMenu)  # bugged-- possibly reliant on commercial-version features?
+        self.setContextMenuPolicy(Qt.CustomContextMenu)  # bugged-- possibly reliant on commercial-version features?
         self.customContextMenuRequested.connect(self.on_context_menu)
 
     def on_context_menu(self, pos):

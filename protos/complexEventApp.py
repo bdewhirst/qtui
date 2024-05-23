@@ -3,6 +3,7 @@ import sys
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -41,6 +42,7 @@ class MainWindow(QMainWindow):
 
         elif e.button() == Qt.MouseButton.RightButton:
             self.label.setText("mouseDoubleClickEvent RIGHT")
+
 
 app = QApplication(sys.argv)
 
