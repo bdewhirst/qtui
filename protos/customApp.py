@@ -3,7 +3,6 @@ import PySide6.QtCore as psqt_core
 import PySide6.QtWidgets as psqt_widg
 
 
-
 # theme: to customize main window, subclass QMainWindow
 class MainWindow(psqt_widg.QMainWindow):
     def __init__(self):
@@ -20,6 +19,7 @@ class MainWindow(psqt_widg.QMainWindow):
         self.setMaximumSize(psqt_core.QSize(600, 900))  # specifies largest size
 
         self.setCentralWidget(button)  # add button as center widget
+
 
 app = psqt_widg.QApplication(sys.argv)
 
