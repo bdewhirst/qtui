@@ -23,7 +23,9 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+
 class MainWindow(QMainWindow):
+    # ref: https://www.pythonguis.com/tutorials/pyside6-widgets/
     def __init__(self):
         super().__init__()
 
@@ -56,6 +58,7 @@ class MainWindow(QMainWindow):
         central_widget.setLayout(layout)
 
         self.setCentralWidget(central_widget)
+
 
 app = QApplication(sys.argv)
 window = MainWindow()

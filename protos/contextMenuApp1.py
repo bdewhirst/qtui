@@ -16,7 +16,6 @@ class MainWindow(qt_wdg.QMainWindow):
         # context.exec(e.globalPos())
 
 
-
 app = qt_wdg.QApplication(sys.argv)
 
 window = MainWindow()
