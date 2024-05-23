@@ -17,6 +17,7 @@ window_titles = [
     "Something went wrong",
 ]
 
+
 # from a tutorial on signals, slots, and events. part 2.
 # remember-- decouple / loosely couple; separate effects from what triggers them
 class MainWindow(psqt_widg.QMainWindow):
@@ -46,7 +47,9 @@ class MainWindow(psqt_widg.QMainWindow):
 
     def the_window_title_changed(self, window_title):
         print("Window title changed: %s" % window_title)
-        if window_title == "Something went wrong":  # note: 'something went wrong' is an element in that list
+        if (
+            window_title == "Something went wrong"
+        ):  # note: 'something went wrong' is an element in that list
             self.button.setDisabled(True)
 
 

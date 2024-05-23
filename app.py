@@ -23,6 +23,8 @@ class MainWindow(psqt_widg.QMainWindow):
     def mouseDoubleClickEvent(self, e):
         self.label.setText("mouseDoubleClickEvent")
 
+    # more complex events are possible, such as labels by which button (left, middle, right) was pressed, etc.
+
 
 app = psqt_widg.QApplication(sys.argv)
 
