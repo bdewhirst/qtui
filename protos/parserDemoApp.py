@@ -73,6 +73,3 @@ parse(app)
 if windows:
     # We've created windows, start the event loop.
     app.exec()
-
-# ref: https://www.pythonguis.com/faq/command-line-arguments-pyqt6/
-# signature:  `python app.py -m cfg.json`
