@@ -7,6 +7,7 @@ QT_STYLES = ["windows", "windowsvista", "fusion", "macos"]
 
 windows = []  # stores created windows
 
+
 def parse(app):
     """Modified example parser which customizes app settings when a json is provided."""
 
@@ -17,15 +18,12 @@ def parse(app):
     parser.addPositionalArgument("file", "Files to open.", "[file file file...]")
 
     maximize_option = QCommandLineOption(
-        ["m", "maximize"],
-        "Maximize the window on startup."
+        ["m", "maximize"], "Maximize the window on startup."
     )
     parser.addOption(maximize_option)
 
     style_option = QCommandLineOption(
-        "s",
-        "Use the specified Qt style, one of: " + ', '.join(QT_STYLES),
-        "style"
+        "s", "Use the specified Qt style, one of: " + ", ".join(QT_STYLES), "style"
     )
     parser.addOption(style_option)
 
@@ -43,7 +41,7 @@ def parse(app):
     # Iterate all arguments and open the files.
     for tfile in arguments:
         try:
-            with open(tfile, 'r') as f:
+            with open(tfile, "r") as f:
                 text = f.read()
         except Exception:
             # Skip this file if there is an error.
